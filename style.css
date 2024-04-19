@@ -289,11 +289,40 @@ h1, h2, h3, h4, h5, h6 {
 
 /*section motivation*/
 
+.motivation {
+    [class*="__item"]:nth-child(even) {
+        background-color: var(--color-dark-alternate);
+    }
+
+    [class*="__item"]:nth-child(even) .motivation__card {
+        flex-direction: row-reverse;
+
+    }
+
+    [class*="__card"] {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: clamp(30px, 10.42vw,200px);
+    }
+    [class*="__card-image"] {
+        margin-block: -60px; /*смещение картинки вверх и вниз от контейнера*/
+    }
+
+    [class*="__card-body"] {
+        padding-left: 35px;
+    }
 
 
-/*адаптив шапки сайта */
+}
 
-@media screen and (max-width: 1024px) {
+
+
+
+
+        /*адаптив шапки сайта */
+
+    @media screen and (max-width: 1024px) {
     .header {
         flex-wrap: wrap;
         row-gap: 10px;
@@ -308,8 +337,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .header {
         [class*="__menu"] {
-        order: 1;
-        flex-basis:fit-content;
+            order: 1;
+            flex-basis:fit-content;
         }
     }
 
@@ -327,40 +356,41 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
 
-    .button {
-        padding-inline: 18px;
-    }
-
-    .header {
-        padding-top: 10px;
-    }
-
-    .header__menu-list {
-        column-gap: 24px;
-    }
-
-    .header__menu-link {
-        height: 32px;
-    }
-
-    .header__actions {
-        column-gap: 20px;
-    }
-
-    .banner {
-        [class*="__info"]{
-            margin-bottom: 5px;
+        .button {
+            padding-inline: 18px;
         }
-    }
 
-    .banner {
-        [class*="__info"]::before {
-            margin-right: 10px;
+        .header {
+            padding-top: 10px;
         }
-    }
 
+        .header__menu-list {
+            column-gap: 24px;
+        }
+
+        .header__menu-link {
+            height: 32px;
+        }
+
+        .header__actions {
+            column-gap: 20px;
+        }
+
+        .banner {
+            [class*="__info"]{
+                margin-bottom: 5px;
+            }
+        }
+
+        .banner {
+            [class*="__info"]::before {
+                margin-right: 10px;
+            }
+        }
+
+    }
 }
 
 
