@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-medium {
-    font-size: 40px;
+    font-size: clamp(20px, 2.08vw, 40px);
     line-height: 1.3;
     color: var(--color-light);
 }
@@ -163,6 +163,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     position: absolute;
     right: 0;
+    top: 0;
     height: 100%;
     aspect-ratio: 1;
     background: url(./icons/bold-arrow-top-right.svg) center / 70% no-repeat;
@@ -407,7 +408,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-        /*адаптив шапки сайта */
+        /* адаптив  сайта */
+
+    @media screen and (max-width: 1919px) {
+        .motivation__card-image {
+            margin-block: -20px;
+        }
+
+    }
+
 
     @media screen and (max-width: 1024px) {
     .header {
@@ -441,6 +450,15 @@ h1, h2, h3, h4, h5, h6 {
         row-gap: 10px;
 
     }
+    .motivation__card-image {
+        max-width: 30%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .motivation__card {
+        padding-block: 50px;
+    }
 }
 
     @media screen and (max-width: 767px) {
@@ -448,6 +466,7 @@ h1, h2, h3, h4, h5, h6 {
         .button {
             padding-inline: 18px;
         }
+
 
         .header {
             padding-top: 10px;
@@ -477,8 +496,28 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+        .motivation {
+
+            [class*="__card"] {
+                flex-direction: column-reverse;
+                padding-block: 30px;
+                row-gap: 30px;
+            }
+
+            [class*="__item"]:nth-child(even) .motivation__card {
+                flex-direction: column-reverse;
+            }
+
+            [class*="__card-image"] {
+                max-width: 60%;
+            }
+
+            [class*="__card-decription"]:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
     }
-}
+
 
 
 
