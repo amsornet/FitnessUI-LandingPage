@@ -444,7 +444,56 @@ h1, h2, h3, h4, h5, h6 {
         background: none;
         padding-top: 0;
     }
+}
 
+
+.join-us {
+    [class*="__video-wrapper"] {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 150px 30px;
+        background: url(./images/join-us-bg.png) center / cover no-repeat var(--color-dark-alternate);
+    }
+
+    [class*="__video-play-button"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4px;
+        width: 200px;
+        aspect-ratio: 1;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--color-light);
+        background-color: transparent;
+        border: var(--border);
+        border-radius: 50%;
+
+    }
+
+    [class*="__video-play-button"]::after {
+        content: '';
+        width: 26px;
+        aspect-ratio: 1;
+        background: url("./icons/bold-arrow-top-right.svg") center / contain no-repeat;
+        transition-duration: var(--transition-duration);
+    }
+
+    [class*="__video-play-button"]:hover {
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+    }
+
+    [class*="__video-play-button"]:hover::after {
+        filter: invert(1);
+    }
 
 
 
