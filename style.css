@@ -485,6 +485,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .join-us {
+
+    background-color: var(--color-dark-alternate);
+
     [class*="__video-wrapper"] {
         position: relative;
         display: flex;
@@ -492,6 +495,12 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         padding: 150px 30px;
         background: url(./images/join-us-bg.png) center / cover no-repeat var(--color-dark-alternate);
+    }
+
+    [class*="__video"] {
+        width: 100%;
+        max-width: 960px;
+        height: auto;
     }
 
     [class*="__video-play-button"] {
@@ -571,6 +580,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 20px;
         line-height: 1.65;
         text-transform: uppercase;
+        text-align: center;
         color: var(--color-light);
     }
 
@@ -647,6 +657,14 @@ h1, h2, h3, h4, h5, h6 {
         .motivation__card {
             padding-block: 50px;
         }
+
+        .join-us__body {
+            padding-bottom: 80px;
+        }
+
+        .join-us__title:not(:last-child) {
+            margin-bottom: 80px;
+        }
     }
 
     @media screen and (max-width: 767px) {
@@ -718,6 +736,25 @@ h1, h2, h3, h4, h5, h6 {
 
         .training-types__image {
             max-width: 120px;
+        }
+
+        .join-us__video-play-button {
+            width: 140px;
+        }
+
+        .join-us__title:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        .join-us__form-subtitle {
+            font-size: 16px;
+        }
+
+        .join-us__form-body {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
         }
 
 
