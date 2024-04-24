@@ -168,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
     height: var(--input-height);
     padding-left: 31px;
     padding-right: 80px;
+    color: var(--color-light);
     background-color: transparent;
     border: var(--border);
  }
@@ -189,6 +190,30 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-dark);
     background-color: var(--color-light-gray);
 
+}
+
+.input {
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 25px;
+    color: var(--color-light);
+    background: transparent;
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius);
+}
+
+.input::placeholder {
+    color: var(--color-light);
+}
+
+.input:hover {
+    border-color: var(--color-light);
+}
+
+.input:focus {
+    color: var(--color-dark);
+    background: var(--color-light-gray);
+    outline: none;
 }
 
 /*шапка сайта*/
@@ -548,6 +573,19 @@ h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         color: var(--color-light);
     }
+
+    [class*="__form-input"] {
+        max-width: 400px;
+    }
+
+    [class*="__form-body"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+
 }
 
 
