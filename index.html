@@ -371,29 +371,51 @@
                 class="calculate__form"
             >
               <div class="calculate__form-body">
-                <label class="visually-hidden" for="username"> Name </label>
+                <label class="visually-hidden" for="height">Height</label>
                 <input
                     class="calculate__input input"
-                    id="username"
+                    id="hright"
                     type="number"
-                    placeholder="Name"
+                    placeholder="Height /cm"
                 />
 
-                <label class="visually-hidden" for="username"> Name </label>
+                <label class="visually-hidden" for="weight">Weight</label>
                 <input
                     class="calculate__input input"
-                    id="username"
+                    id="weight"
                     type="number"
-                    placeholder="Name"
+                    placeholder="Weight / kg"
                 />
 
-                <label class="visually-hidden" for="username"> Name </label>
+                <label class="visually-hidden" for="age">Age</label>
                 <input
                     class="calculate__input input"
-                    id="username"
+                    id="age"
                     type="number"
-                    placeholder="Name"
+                    placeholder="Age"
                 />
+
+                <label class="visually-hidden" for="gender">Gender</label>
+                <select
+                    class="calculate__input input"
+                    name="gender"
+                    id="gender"
+                >
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+
+                <label class="visually-hidden" for="activity factor">Select an activity factor:</label>
+                <select
+                    class="calculate__input input wide"
+                    name="activity factor"
+                    id="activity factor"
+                >
+                  <option value="" disabled selected>Select an activity factor:</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
               </div>
               <button
                   class="calculate__button button transparent"
