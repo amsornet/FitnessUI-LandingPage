@@ -212,7 +212,8 @@ h6 {
   border-radius: var(--border-radius);
 }
 
-.input::placeholder {
+.input::placeholder,
+select.input:invalid {
   color: var(--color-light);
 }
 
@@ -709,6 +710,84 @@ input[type=number] {
   [class*="__input"].wide {
     grid-column: -1 / 1;
   }
+
+  [class*="__table-wrapper"] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 610px;
+  }
+
+  [class*="__table-wrapper"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--color-dark);
+    border-radius: 50%;
+  }
+
+  [class*="__table"] {
+    position: relative;
+    border-collapse: collapse;
+  }
+
+  [class*="__table"] :is(td, th) {
+    padding-right: 30px;
+  }
+
+  [class*="__table"] :is(td, th):not(:first-child) {
+    padding-left: 30px;
+  }
+
+  [class*="__table"] :is(td, th):not(:last-child) {
+    border-right: 1px solid var(--color-light-gray);
+  }
+
+  [class*="__table"] tbody td {
+    border-top: 1px solid var(--color-light-gray);
+  }
+
+  [class*="__table"] tbody tr:last-child td:first-child {
+    position: relative;
+
+  }
+
+  [class*="__table"] tbody tr:last-child td:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 66%;
+    height: 1px;
+    background: var(--color-light-gray);
+  }
+
+  [class*="__table"] th {
+    padding-block: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color-light);
+  }
+
+  [class*="__table"] td {
+    padding-block: 14px;
+  }
+
+  [class*="__table"] tfoot {
+    color: var(--color-light);
+  }
+
+  [class*="__table"] tfoot td {
+    padding-top: 33px;
+    padding-bottom: 0;
+  }
+
 
 
 }
