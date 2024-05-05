@@ -45,7 +45,7 @@
 }
 
 body {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.75;
@@ -868,6 +868,30 @@ input[type=number] {
   .family__image {
     height: 360px;
   }
+
+  .calculate {
+    padding-block: 100px;
+  }
+
+  .calculate__inner {
+    column-gap: 20px;
+  }
+
+  .calculate__form-body {
+    grid-template-columns: 1fr;
+  }
+
+  .calculate__button {
+    width: 100%;
+  }
+
+  .calculate__table :is(td, th) {
+    padding-block: 10px;
+  }
+
+  .calculate__table tfoot td {
+    padding-top: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -966,5 +990,18 @@ input[type=number] {
 
   .family__image {
     height: 180px;
+  }
+
+  .calculate__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .calculate__table-wrapper::before {
+    display: none;
+  }
+
+  .calculate {
+    padding-block: 60px;
   }
 }
