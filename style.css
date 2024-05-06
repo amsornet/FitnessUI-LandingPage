@@ -443,7 +443,7 @@ input[type=number] {
   }
 
   [class*="__card-body"] {
-    flex-direction: column;
+    flex-direction: column;x:
     padding-left: 35px;
   }
 
