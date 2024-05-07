@@ -455,7 +455,7 @@ input[type=number] {
   }
 
   [class*="__card-body"] {
-    flex-direction: column;x:
+    flex-direction: column;
     padding-left: 35px;
   }
 
@@ -471,6 +471,8 @@ input[type=number] {
     margin-bottom: 37px;
   }
 }
+
+/*section training-types*/
 
 .training-types {
   padding-top: 70px;
@@ -825,6 +827,10 @@ input[type=number] {
     column-gap: 62.5px;
   }
 
+  [class*="__logo-image"] {
+    height: auto;
+  }
+
   [class*="__header"]:not(:last-child) {
     margin-bottom: 60px;
   }
@@ -1015,9 +1021,26 @@ input[type=number] {
   .calculate__table tfoot td {
     padding-top: 10px;
   }
+
+  .footer__main {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .footer__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .footer__body {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+
   .button {
     padding-inline: 18px;
   }
@@ -1071,6 +1094,7 @@ input[type=number] {
   }
 
   .training-types__list {
+
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
@@ -1126,5 +1150,31 @@ input[type=number] {
 
   .calculate {
     padding-block: 60px;
+  }
+
+  .footer {
+    --footerLogoWidth: none;
+
+    [class="__body"] {
+      grid-template-columns:  1fr;
+    }
+
+    [class*="__main"] {
+      padding-top: 50px;
+    }
+
+    [class*="__header"]:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    [class*="__header"]:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    [class="__subscribe"]:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+
   }
 }
