@@ -792,6 +792,40 @@ input[type=number] {
 
 }
 
+/*section footer*/
+
+.footer {
+  --footerLogoWidth: 20.3%;
+
+  [class*="__main"] {
+    padding-top: 140px;
+    padding-bottom: 160px;
+  }
+
+  [class*="__extra"] {
+    padding-block: 15px;
+    background-color: var(--color-dark-alternate);
+  }
+
+  [class*="__header"] {
+    display: grid;
+    grid-template-columns: var(--footerLogoWidth) auto;
+    column-gap: 62.5px;
+  }
+
+  [class*="__description"] {
+    text-align: left;
+  }
+
+  [class*="__body"] {
+    display: grid;
+    grid-template-columns: var(--footerLogoWidth) repeat(3, 1fr);
+    column-gap: 62.5px;
+  }
+
+}
+
+
 /* адаптив  сайта */
 
 @media screen and (max-width: 1919px) {
